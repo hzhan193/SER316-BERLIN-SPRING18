@@ -50,7 +50,7 @@ public class AgendaPanel extends JPanel {
 	JButton historyForwardB = new JButton();
 	JButton export = new JButton();
 	JEditorPane viewer = new JEditorPane("text/html", "");
-	String[] priorities = {"Very High","High","Middle","Low","Very Low"};
+	String[] priorities = {"Highest","High","Middle","Low","Lowest"};
 	JScrollPane scrollPane = new JScrollPane();
 
 	DailyItemsPanel parentPanel = null;
@@ -200,7 +200,7 @@ public class AgendaPanel extends JPanel {
 					}else if (d.startsWith("memoranda:exportstickersh")) {
 						 /* Need to add export sticker function */
 						 final JFrame parent = new JFrame();
-						 String name = JOptionPane.showInputDialog(parent,Local.getString("Enter a file name to export as a html file:"),null);
+						 String name = JOptionPane.showInputDialog(parent,Local.getString("Enter a file name to export as an html file:"),null);
 						 new ExportSticker(name).export("html");
 						 //JOptionPane.showMessageDialog(null,name);
 					}else if (d.startsWith("memoranda:importstickers")) {
