@@ -3,8 +3,6 @@ package main.java.memoranda.ui;
 import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.Toolkit;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Calendar;
 
 import javax.swing.ImageIcon;
@@ -137,9 +135,8 @@ public class App {
 		frame.setVisible(true);
 		frame.toFront();
 		frame.requestFocus();
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 	}
-	
 
 	public static void closeWindow() {
 		if (frame == null)
@@ -152,8 +149,7 @@ public class App {
 	 */
 	private void showSplash() {
 		splash = new JFrame();
-		ImageIcon spl =
-			new ImageIcon(App.class.getResource("/ui/splash.png"));
+		ImageIcon spl = new ImageIcon(App.class.getResource("/ui/splash.png"));
 		JLabel l = new JLabel();
 		l.setSize(400, 300);
 		l.setIcon(spl);
