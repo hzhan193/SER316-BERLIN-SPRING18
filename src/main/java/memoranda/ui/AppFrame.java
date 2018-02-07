@@ -686,6 +686,10 @@ public class AppFrame extends JFrame {
                 doExit();
             //else
                 //doMinimize();
+            else if (Configuration.get("ON_CLOSE").equals("Close the window"))
+                doMinimize();
+            else 
+            	doExit();
         }
         else if ((e.getID() == WindowEvent.WINDOW_ICONIFIED)) {
             //super.processWindowEvent(new WindowEvent(this,
