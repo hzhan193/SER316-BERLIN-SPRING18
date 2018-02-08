@@ -1,3 +1,4 @@
+
 package main.java.memoranda.ui;
 
 import java.awt.AWTEvent;
@@ -1108,4 +1109,3 @@ public class AppFrame extends JFrame {
             }
         }
 
-}
