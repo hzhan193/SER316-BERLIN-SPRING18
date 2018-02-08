@@ -3,8 +3,6 @@ package main.java.memoranda.ui;
 import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.Toolkit;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Calendar;
 
 import javax.swing.ImageIcon;
@@ -14,7 +12,6 @@ import javax.swing.UIManager;
 
 import main.java.memoranda.EventsScheduler;
 import main.java.memoranda.util.Configuration;
-
 
 /**
  * 
@@ -133,30 +130,13 @@ public class App {
 		}
 		/* --------------------------------------------------------------- */
 		/* Added By Jeremy Whitlock (jcscoobyrs) 07-Nov-2003 at 15:54:24 */
-		
-		
-		// Waits for 1.5 seconds before closing the splash screen
-		// ------------------------------------- mawebbe1
-		// Sources: https://stackoverflow.com/questions/24104313/how-to-delay-in-java
-		// Ann Ragg
-		try        
-		{
-		    Thread.sleep(1500);
-		} 
-		catch(InterruptedException ex) 
-		{
-		    Thread.currentThread().interrupt();
-		}
-		// ------------------------------------- mawebbe1
-		
 
 		// Not needed ???
 		frame.setVisible(true);
 		frame.toFront();
 		frame.requestFocus();
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 	}
-	
 
 	public static void closeWindow() {
 		if (frame == null)
@@ -169,19 +149,16 @@ public class App {
 	 */
 	private void showSplash() {
 		splash = new JFrame();
-		ImageIcon spl =
-			new ImageIcon(App.class.getResource("/ui/splash3.png"));
+		ImageIcon spl = new ImageIcon(App.class.getResource("/ui/splash.png"));
 		JLabel l = new JLabel();
-		//splash  dimensions 400, 300
-		//splash2 dimensions 672, 378
-		l.setSize(672, 378);
+		l.setSize(400, 300);
 		l.setIcon(spl);
 		splash.getContentPane().add(l);
-		splash.setSize(672, 378);
+		splash.setSize(400, 300);
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		splash.setLocation(
-			(screenSize.width - 672) / 2,
-			(screenSize.height - 378) / 2);
+			(screenSize.width - 400) / 2,
+			(screenSize.height - 300) / 2);
 		splash.setUndecorated(true);
 		splash.setVisible(true);
 	}
