@@ -665,8 +665,8 @@ public class AppFrame extends JFrame {
     }
 
     public void doMinimize() {
-        exitNotify();
-        App.closeWindow();
+        //exitNotify();
+        //App.closeWindow();
     }
 
     //Help | About action performed
@@ -684,13 +684,17 @@ public class AppFrame extends JFrame {
         if (e.getID() == WindowEvent.WINDOW_CLOSING) {
             if (Configuration.get("ON_CLOSE").equals("exit"))
                 doExit();
-            else
+            //else
+                //doMinimize();
+            else if (Configuration.get("ON_CLOSE").equals("Close the window"))
                 doMinimize();
+            else 
+            	doExit();
         }
         else if ((e.getID() == WindowEvent.WINDOW_ICONIFIED)) {
-            super.processWindowEvent(new WindowEvent(this,
-                    WindowEvent.WINDOW_CLOSING));
-            doMinimize();
+            //super.processWindowEvent(new WindowEvent(this,
+                    //WindowEvent.WINDOW_CLOSING));
+            //doMinimize();
         }
         else
             super.processWindowEvent(e);
