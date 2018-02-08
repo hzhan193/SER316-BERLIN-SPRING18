@@ -1108,4 +1108,5 @@ public class AppFrame extends JFrame {
                     exc.printStackTrace();
             }
         }
+}
 
