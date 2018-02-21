@@ -110,11 +110,11 @@ public class ResourcesPanel extends JPanel {
             }
         });
         refreshB.setBorderPainted(false);
-        refreshB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                refreshB_actionPerformed(e);
-            }
-        });
+        //refreshB.addActionListener(new java.awt.event.ActionListener() {
+        //    public void actionPerformed(ActionEvent e) {
+        //        refreshB_actionPerformed(e);
+        //    }
+        //});
         refreshB.setFocusable(false);
         refreshB.setPreferredSize(new Dimension(24, 24));
         refreshB.setRequestFocusEnabled(false);
