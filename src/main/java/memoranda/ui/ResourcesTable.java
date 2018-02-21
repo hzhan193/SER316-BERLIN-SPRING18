@@ -42,7 +42,7 @@ public class ResourcesTable extends JTable {
         this.setShowGrid(false);
         this.setFont(new Font("Dialog",0,11));
         initColumsWidth();
-        //this.setModel(new ResourcesTableModel());
+        this.setModel(new ResourcesTableModel());
         CurrentProject.addProjectListener(new ProjectListener() {
             public void projectChange(Project p, NoteList nl, TaskList tl, ResourcesList rl) {                
                
