@@ -142,6 +142,8 @@ public class PreferencesDialog extends JDialog {
 	public PreferencesDialog(Frame frame) {
 		super(frame, Local.getString("Preferences"), true);
 		try {
+		    this.lfSystemRB.setVisible(false);
+		    this.lfJavaRB.setVisible(false);
 			jbInit();
 		} catch (Exception ex) {
 			new ExceptionDialog(ex);
@@ -650,7 +652,6 @@ public class PreferencesDialog extends JDialog {
 
 		String lf = Configuration.get("LOOK_AND_FEEL").toString();
 		String newlf = "";
-
 		if (this.lfSystemRB.isSelected())
 			newlf = "system";
 		else if (this.lfJavaRB.isSelected())
