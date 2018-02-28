@@ -144,6 +144,10 @@ public class PreferencesDialog extends JDialog {
 		try {
 		    this.lfSystemRB.setVisible(false);
 		    this.lfJavaRB.setVisible(false);
+		    this.lfCustomRB.setVisible(false);
+		    this.jLabel3.setVisible(false);
+		    classNameLabel.setVisible(false);
+		    lfClassName.setVisible(false);
 			jbInit();
 		} catch (Exception ex) {
 			new ExceptionDialog(ex);
